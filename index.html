@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance System</h1>
+        
+        <div class="add-section">
+            <input type="text" id="studentName" placeholder="Enter student name...">
+            <button onclick="addStudent()">Add Student</button>
+        </div>
+
+        <div class="summary">
+            <p>Total: <span id="totalCount">0</span></p>
+            <p>Present: <span id="presentCount" class="text-success">0</span></p>
+            <p>Absent: <span id="absentCount" class="text-danger">0</span></p>
+        </div>
+
+        <div class="list-section">
+            <table id="attendanceTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentList">
+                    <!-- Students will be generated here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <button class="clear-btn" onclick="clearData()">Clear All Data</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
